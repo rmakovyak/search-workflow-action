@@ -1,0 +1,28 @@
+name: 'search-workflow-action'
+description: 'Action to search for Github Actions workflow runs'
+branding:
+  icon: search
+  color: gray-dark
+
+inputs:
+  owner:
+    description: 'Repo owner'
+    required: true
+  repo:
+    description: 'Repo'
+    required: true
+  status:
+    description: 'Can be one of: completed, action_required, cancelled, failure, neutral, skipped, stale, success, timed_out, in_progress, queued, requested, waiting'
+  event:
+    description: 'Returns workflow run triggered by the event you specify. For example, push, pull_request or issue'
+  name:
+    description: 'Name of the workflow'
+  GITHUB_AUTH_TOKEN:
+    description: 'Must have the `actions:read` permission to use this endpoint'
+    required: true
+outputs:
+  data:
+    description: 'Workflow run data'
+runs:
+  using: 'node16'
+  main: 'dist/index.js'

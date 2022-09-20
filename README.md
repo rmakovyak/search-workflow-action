@@ -10,9 +10,9 @@ Input and output variables used by search-workflow-action
 
 - **`owner` Required** repo owner.
 - **`repo` Required** repo.
-- **`status` Required** Can be one of: completed, action_required, cancelled, failure, neutral, skipped, stale, success, timed_out, in_progress, queued, requested, waiting.
-- **`event` Required** Returns workflow run triggered by the event you specify. For example, push, pull_request or issue.
-- **`name` Required** Name of the workflow.
+- **`status`** Can be one of: completed, action_required, cancelled, failure, neutral, skipped, stale, success, timed_out, in_progress, queued, requested, waiting.
+- **`event`** Returns workflow run triggered by the event you specify. For example, push, pull_request or issue.
+- **`name`** Name of the workflow.
 - **`GITHUB_AUTH_TOKEN` Required** must have the `actions:read` permission to use this endpoint.
 
 ### Outputs
