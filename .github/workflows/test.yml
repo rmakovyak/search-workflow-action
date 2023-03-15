@@ -15,7 +15,6 @@ jobs:
           owner: 'rmakovyak'
           repo: 'search-workflow-action'
           name: 'Test'
-          GITHUB_AUTH_TOKEN: ${{ secrets.GH_AUTH_TOKEN }}
-
+          status: success
       - name: Get action output
         run: echo "${{ steps.var.outputs.data }}"

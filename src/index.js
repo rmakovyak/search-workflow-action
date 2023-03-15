@@ -15,11 +15,11 @@ const run = async () => {
     });
 
     const response = await octokit.request(
-      'GET /repos/{owner}/{repo}/actions/runs?status={status}&event={event}',
+      'GET /repos/{owner}/{repo}/actions/runs?conclusion={status}&event={event}',
       {
         owner,
         repo,
-        status,
+        conclusion: status,
         event
       }
     );
@@ -30,7 +30,7 @@ const run = async () => {
 
     core.setOutput('data', workflowRun);
   } catch (error) {
-    core.setFailed('data', error.message);
+    core.setFailed(error.message);
   }
 };
 
