@@ -30,7 +30,7 @@ const run = async () => {
 
     core.setOutput('data', workflowRun);
   } catch (error) {
-    core.setFailed('data', error.message);
+    core.setFailed(error.message);
   }
 };
 
