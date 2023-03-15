@@ -29,6 +29,10 @@ const run = async () => {
     )[0];
 
     core.setOutput('data', workflowRun);
+
+    if (!workflowRun) {
+      throw new Error('Failed to find a workflow run');
+    }
   } catch (error) {
     core.setFailed(error.message);
   }
