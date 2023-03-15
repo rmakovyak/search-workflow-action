@@ -12,9 +12,13 @@ jobs:
         id: var
         uses: ./
         with:
-          owner: 'rmakovyak'
-          repo: 'search-workflow-action'
-          name: 'Test'
+          # owner: 'rmakovyak'
+          # repo: 'search-workflow-action'
+          # name: 'Test'
+          owner: scoutbeedev
+          repo: design-system
+          status: success
+          name: Publish release notes
           GITHUB_AUTH_TOKEN: ${{ secrets.GH_AUTH_TOKEN }}
 
       - name: Get action output
